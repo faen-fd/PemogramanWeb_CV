@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web CV - Rifaldi Datu</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            min-height: 90vh;
+        }
+
+        /* --- PERBAIKAN: Gaya Foto Profil --- */
+        .profile-container {
+            margin: 20px 0 10px 0;
+        }
+        .profile-img {
+            width: 150px;
+            height: 180px; /* Rasio pas foto */
+            object-fit: cover;
+            border: 1px solid #ccc;
+            display: block;
+            background-color: #eee;
+        }
+
+        nav ul { list-style: disc; padding-left: 20px; }
+        nav li { margin-bottom: 5px; }
+        a { color: #2c3e50; text-decoration: underline; cursor: pointer; }
+
+        h1 { margin-bottom: 0; font-size: 2.5em; }
+        .subtitle { color: #555; margin-top: 5px; margin-bottom: 20px; }
+        h2 { border-bottom: 2px solid #eee; padding-bottom: 5px; margin-top: 30px; }
+        h3 { margin-bottom: 5px; color: #444; }
+
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+        }
+        textarea { height: 120px; resize: vertical; }
+        button { 
+            background: #2c3e50; color: white; border: none; padding: 10px 20px; 
+            cursor: pointer; border-radius: 4px; font-size: 16px; 
+        }
+        button:hover { background: #34495e; }
+
+        footer { margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9em; color: #777; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="page1">
+        <header>
+            <h1>Rifaldi Datu</h1>
+            <p class="subtitle">Mahasiswa Teknik Informatika</p>
+
+            <div class="profile-container">
+                <img src="foto.jpg" alt="Foto Profil Rifaldi Datu" class="profile-img">
+            </div>
+            
+            <p><strong>Foto Profil</strong></p>
+
+            <nav>
+                <ul>
+                    <li><a href="#tentang">Tentang Saya</a></li>
+                    <li><a href="#pendidikan">Pendidikan</a></li>
+                    <li><a href="#pengalaman">Pengalaman</a></li>
+                    <li><a href="#skill">Skill</a></li>
+                    <li><a onclick="showPage(2)">Kontak</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="tentang">
+                <h2>Tentang Saya</h2>
+                <p>Saya adalah mahasiswa Informatika yang sedang belajar dan mengembangkan kemampuan di bidang pemrograman dan teknologi informasi. Saya tertarik untuk terus meningkatkan keterampilan teknis melalui pembelajaran dan pengalaman langsung. Selain itu, saya memiliki pengalaman berorganisasi yang membantu saya belajar bekerja dalam tim, mengatur tugas, serta bertanggung jawab terhadap pekerjaan yang diberikan.</p>
+            </section>
+
+            <section id="pendidikan">
+                <h2>Pendidikan</h2>
+                <article>
+                    <h3>D4 Teknik Informatika</h3>
+                    <p>Politeknik Negeri Manado (2024 - Sekarang)</p>
+                </article>
+                <article>
+                    <h3>SMA Negeri 01 Wonosari</h3>
+                    <p>Jurusan IPA (2021 - 2024)</p>
+                </article>
+            </section>
+
+            <section id="pengalaman">
+                <h2> Pengalaman Organisasi </h2>
+                <article>
+                    <span class="role">Anggota Sie Konsumsi — Wisata Dakwah 2024, Badan Tadzkir</span>
+                    <span class="date">Desember 2024</span>
+                    <ul>
+                        <li>Menyiapkan dan memastikan ketersediaan konsumsi selama kegiatan berlangsung.</li>
+                        <li>Membantu pendataan, pembelian, dan pengelolaan konsumsi secara tepat waktu.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <span class="role">Anggota Sie PETRA — Bootcamp 2025, UKM Multimedia</span>
+                    <span class="date">April — Juni 2025</span>
+                    <ul>
+                        <li>Menyiapkan dan mendistribusikan perlengkapan serta membantu penyediaan transportasi.</li>
+                        <li>Membantu pendataan, pengelolaan, dan pengawasan peralatan.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <span class="role">Koordinator Usaha Dana — MUKTAMAR XXX, Badan Tadzkir</span>
+                    <span class="date">Juli 2025</span>
+                    <ul>
+                        <li>Merencanakan dan mengkoordinasikan strategi penggalangan dana serta pengajuan proposal.</li>
+                        <li>Mengawasi pelaksanaan penggalangan dana dan memastikan pelaporan berjalan baik.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <span class="role">Anggota Sie PETRA — MUBES V, UKM Multimedia</span>
+                    <span class="date">Agustus 2025</span>
+                    <ul>
+                        <li>Menyiapkan perlengkapan dan transportasi sesuai kebutuhan kegiatan.</li>
+                        <li>Membantu pendataan inventaris dan memastikan peralatan kembali dengan baik.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <span class="role">Koordinator Sie PETRA — Perekrutan Angkatan V, UKM Multimedia</span>
+                    <span class="date">Oktober — November 2025</span>
+                    <ul>
+                        <li>Merencanakan kebutuhan perlengkapan, transportasi, dan fasilitas kegiatan.</li>
+                        <li>Mengatur distribusi tugas lapangan dan pendataan inventaris.</li>
+                        <li>Bertanggung jawab atas operasional perlengkapan dan menyusun laporan pertanggungjawaban.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <span class="role">Anggota Sie Usaha Dana — Pesantren Kilat-XXX, Badan Tadzkir</span>
+                    <span class="date">Oktober — November 2025</span>
+                    <ul>
+                        <li>Melaksanakan penggalangan dana dan membantu pengajuan proposal ke sponsor.</li>
+                        <li>Membantu pengelolaan, pencatatan, dan penyetoran dana kegiatan.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <span class="role">Ketua Panitia — Wisata Dakwah 2025, Badan Tadzkir</span>
+                    <span class="date">Desember 2025</span>
+                    <ul>
+                        <li>Mengkoordinasikan seluruh panitia dan memimpin rapat kelancaran kegiatan.</li>
+                        <li>Bertanggung jawab atas perencanaan, pelaksanaan, dan keberlangsungan acara.</li>
+                        <li>Mengevaluasi kinerja panitia dan mengambil keputusan strategis.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="skill">
+            <h2>Skills</h2>
+                <ul>
+                    <li>HTML (Basic)</li>
+                    <li>Microsoft Office</li>
+                    <li>UI/UX Design (Basic)</li>
+                    <li>C Programming (Basic)</li>
+                </ul>
+            </section>
+
+            <section id="info-tambahan">
+                <h2>Informasi Tambahan</h2>
+                <p><strong>Hobi:</strong> Membaca Komik, Watching Anime</p>
+                <p><strong>Email:</strong> faldydatu@gmail.com</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Rifaldi Datu. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <div id="page2" class="hidden">
+        <header>
+            
+            <h1>Hubungi Saya</h1>
+            <p><a onclick="showPage(1)">← Kembali ke Portofolio</a></p>
+
+        </header>
+
+        <main>
+            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Pesan Terkirim!');">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hp">Nomor HP:</label>
+                    <input type="tel" id="hp" name="hp" placeholder="0812xxxx">
+                </div>
+
+                <div class="form-group">
+                    <label for="subjek">Subjek:</label>
+                    <select id="subjek" name="subjek">
+                        <option value="Kerjasama">Kerjasama</option>
+                        <option value="Tanya">Tanya-tanya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight: normal;">
+                        <input type="checkbox" id="setuju" name="setuju" required> 
+                        Saya menyetujui pengiriman data
+                    </label>
+                </div>
+
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>© 2026 Rifaldi Datu</p>
+        </footer>
+    </div>
+
+</div>
+
+<script>
+    function showPage(pageNumber) {
+        const p1 = document.getElementById('page1');
+        const p2 = document.getElementById('page2');
+
+        if(pageNumber === 1) {
+            p1.classList.remove('hidden');
+            p2.classList.add('hidden');
+        } else {
+            p1.classList.add('hidden');
+            p2.classList.remove('hidden');
+        }
+        window.scrollTo(0,0);
+    }
+</script>
+
+</body>
+</html>
